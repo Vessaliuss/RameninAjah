@@ -1,0 +1,145 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(../../Gallery/Background7.png);
+    font-family: Arial, sans-serif;
+}
+h1 {
+    margin: 10px 0;
+    font-size: 24px;
+    color: white;
+}
+h2 {
+    color: white;
+    font-size: 20px;
+    margin-top: 120px;
+    margin-bottom: 40px;
+}
+p {
+    color: white;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+.formlogin-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+.formlogin-box {
+    background-color: rgba(197, 196, 196, 0.4); /* Adjust the opacity as needed */
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    width: 420px;
+    height: 440px;
+    position: relative;
+    overflow: hidden;
+}
+.formlogin-logo {
+    display: flex;
+    position: absolute;
+    border-radius: 20px;
+    top: -8%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 20;
+}
+.formlogin-logo-image {
+    width: 230px;
+    height: 200px;
+}
+.formlogin-input-group {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    background-color: #fff;
+    border-radius: 5px;
+}
+.formlogin-input-icon {
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+    background-position: center;
+    margin: 5px;
+}
+.formlogin-user-icon {
+    background-image: url('../../Gallery/User.png');
+    width: 25px;
+    height: 25px;
+}
+.formlogin-key-icon {
+    background-image: url('../../Gallery/pw.png');
+    width: 25px;
+    height: 25px;
+}
+.formlogin-input-group input {
+    width: calc(100% - 50px);
+    padding: 10px;
+    border: none;
+    border-radius: 0 5px 5px 0;
+}
+button {
+    width: 20%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #a5a2d6;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 30px;
+}
+@media (max-width: 400px) {
+    .formlogin-box {
+        width: 100%;
+        padding: 15px;
+    }
+    h2 {
+        margin-top: 100px;
+        font-size: 18px;
+    }
+    p {
+        font-size: 14px;
+    }
+    .formlogin-input-group input {
+        padding: 8px;
+    }
+    button {
+        padding: 8px;
+        font-size: 14px;
+    }
+    .formlogin-logo-image {
+        width: 180px;
+        height: 160px;
+    }
+}
+@media (max-width: 300px) {
+    .formlogin-box {
+        width: 100%;
+        padding: 10px;
+    }
+    h2 {
+        margin-top: 80px;
+        font-size: 16px;
+    }
+    p {
+        font-size: 12px;
+    }
+    .formlogin-input-group input {
+        padding: 6px;
+    }
+    button {
+        padding: 6px;
+        font-size: 12px;
+    }
+    .formlogin-logo-image {
+        width: 150px;
+        height: 130px;
+    }
+}

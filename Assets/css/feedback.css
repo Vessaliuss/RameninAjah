@@ -1,0 +1,315 @@
+/*-- Start Global Styles --*/
+body {
+  font-family: "Poppins", sans-serif;
+  color: #0c0c0c;
+  background-color: #ffffff;
+}
+.layout_padding {
+  padding: 75px 0;
+}
+.layout_padding2 {
+  padding: 45px 0;
+}
+.layout_padding2-top {
+  padding-top: 45px;
+}
+.layout_padding2-bottom {
+  padding-bottom: 45px;
+}
+.layout_padding-top {
+  padding-top: 75px;
+}
+.layout_padding-bottom {
+  padding-bottom: 75px;
+}
+.heading_container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.heading_container h2 {
+  position: relative;
+  font-weight: bold;
+}
+.heading_container h2::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #d8bf36;
+  top: 50%;
+  right: -30px;
+  border-radius: 100%;
+  transform: translateY(-50%);
+}
+/*-- End Global Styles --*/
+
+
+
+
+
+/*-- Start Header Section --*/
+.hero_area {
+  position: relative;
+  background-size: cover;
+  background-position: bottom;
+  display: flex;
+  flex-direction: column;
+  background-image: url(../../Gallery/Background6.png);
+}
+.sub_page .hero_area {
+  height: auto;
+  background: none;
+  background-color: #041858;
+}
+.sub_page .footer_bg {
+  background: none;
+  background-color: #041858;
+  padding-top: 45px;
+}
+.header_section .container-fluid {
+  padding-right: 25px;
+  padding-left: 25px;
+}
+.header_section .nav_container {
+  margin: 0 auto;
+}
+.custom_nav-container .navbar-nav .nav-item .nav-link {
+  padding: 3px 15px;
+  margin: 10px 15px;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 20px;
+}
+.custom_nav-container .navbar-nav .nav-item.active .nav-link,
+.custom_nav-container .navbar-nav .nav-item:hover .nav-link {
+  background-color: #d8bf36;
+}
+a, a:hover, a:focus {
+  text-decoration: none;
+}
+a:hover, a:focus {
+  color: initial;
+}
+.btn, .btn:focus {
+  outline: none !important;
+  box-shadow: none;
+}
+.custom_nav-container .nav_search-btn {
+  background-size: 22px;
+  background-repeat: no-repeat;
+  background-position-y: 7px;
+  width: 35px;
+  height: 35px;
+  padding: 0;
+  border: none;
+}
+.navbar-brand {
+  margin-left: 25px;
+}
+.navbar-brand span {
+  font-size: 24px;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+.custom_nav-container {
+  z-index: 99999;
+}
+.navbar-expand-lg .navbar-collapse {
+  align-items: flex-end;
+}
+.custom_nav-container .navbar-toggler {
+  outline: none;
+  padding: 0;
+  width: 37px;
+  height: 42px;
+}
+.custom_nav-container .navbar-toggler span {
+  display: block;
+  width: 35px;
+  height: 4px;
+  background-color: #ffffff;
+  margin: 7px 0;
+  transition: all .3s;
+}
+.custom_nav-container .navbar-toggler[aria-expanded="true"] .s-1 {
+  transform: rotate(45deg);
+  margin: 0;
+  margin-bottom: -4px;
+}
+.custom_nav-container .navbar-toggler[aria-expanded="true"] .s-2 {
+  display: none;
+}
+.custom_nav-container .navbar-toggler[aria-expanded="true"] .s-3 {
+  transform: rotate(-45deg);
+  margin: 0;
+  margin-top: -4px;
+}
+.custom_nav-container .navbar-toggler[aria-expanded="false"] .s-1,
+.custom_nav-container .navbar-toggler[aria-expanded="false"] .s-2,
+.custom_nav-container .navbar-toggler[aria-expanded="false"] .s-3 {
+  transform: none;
+}
+.quote_btn-container {
+  display: flex;
+  align-items: center;
+}
+.quote_btn-container a {
+  color: #ffffff;
+  margin-right: 25px;
+}
+.quote_btn-container a img {
+  width: 15px;
+  margin: 0 25px;
+}
+/*-- End Header Section --*/
+
+
+
+
+
+
+/*-- Start Form Section --*/
+.form-feedback-main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.form-feedback-container {
+    margin-top: 30px;
+    background-color: aliceblue;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.form-feedback-left-section {
+    width: 55%;
+    padding-right: 20px;
+}
+.form-feedback-right-section {
+    width: 40%;
+}
+h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+.form-feedback-form-group {
+    margin-bottom: 15px;
+}
+.form-feedback-form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+.form-feedback-form-group input, .form-feedback-form-group textarea, .form-feedback-form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.form-feedback-form-group input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+}
+.form-feedback-form-group button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.form-feedback-form-group button:hover {
+    background-color: #218838;
+}
+.form-feedback-read-more-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    margin-top: 20px;
+}
+.form-feedback-read-more-btn:hover {
+    background-color: #218838;
+}
+p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+.form-feedback-checkbox-group {
+    display: flex;
+    align-items: center;
+}
+/*-- End Form Section --*/
+
+
+.floating-notification {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #4CAF50;
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.floating-notification.show {
+  display: block;
+  opacity: 1;
+}
+
+
+/*-- Start Footer Section --*/
+.info_section {
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+  }
+  .info_section .info_logo h3,
+  .info_section .info_links h4,
+  .info_section .info_contact h4,
+  .info_section .info_form h4,
+  .info_section p,
+  .info_section a {
+    color: #ffffff;
+  }
+  .info_section .info_form form input,
+  .info_section .info_form form button {
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px 0;
+  }
+  .info_section .info_form form button {
+    background-color: #d8bf36;
+    color: #ffffff;
+    cursor: pointer;
+  }
+  .info_section .info_form form button:hover {
+    background-color: #e0cd61;
+  }
+  .info_section .social_box a {
+    display: inline-block;
+    margin: 5px;
+  }
+/*-- End Footer Section --*/

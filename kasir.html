@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ramenin Aajah</title>
+  <style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #C63C30;
+    color: white;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.sidebar .logo img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.sidebar .menu {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar .menu li {
+    margin: 20px 0;
+}
+
+.sidebar .menu li a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar .menu li a img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.main-content {
+    flex: 1;
+    background-color: #f2e5e5;
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.header .user-name {
+    background-color: white;
+    padding: 10px;
+    border-radius: 50px;
+}
+
+.profile-form {
+    background-color: #f2e5e5;
+    padding: 20px;
+    border-radius: 10px;
+    width: 500px;
+    margin: 20px auto;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-form form .form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.profile-form form label {
+    width: 150px;
+    font-weight: bold;
+}
+
+.profile-form form input[type="email"],
+.profile-form form input[type="text"],
+.profile-form form input[type="file"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.profile-form form input[type="file"] {
+    padding: 5px;
+}
+
+.profile-form form .edit-btn {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    align-self: flex-end;
+    margin-top: 10px;
+}
+
+  </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="logo">
+                <img src="Gallery/RameninAjah2.png" alt="Ramenin Ajah Logo">
+                <hr>
+            </div>
+            <ul class="menu">
+                <li><a href="#"><img src="Gallery/Profile.png" alt="My Profile Icon"> My Profile</a></li>
+                <li><a href="#"><img src="Gallery/Transaction.png" alt="Transaction Icon"> Transaction</a></li>
+                <li><a href="#"><img src="Gallery/Menu.png" alt="Menu Icon"> Menu</a></li>
+                <li><a href="#"><img src="Gallery/Table.png" alt="Cek Table Icon"> Cek Table</a></li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <div class="header">
+                <span class="user-name">Tukang Nasgor</span>
+            </div>
+            <div class="profile-form">
+                <form>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" value="" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="full-name">Full Name</label>
+                        <input type="text" id="full-name" name="full-name" value="" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="picture">Pictures</label>
+                        <input type="file" id="picture" name="picture">
+                    </div>
+                    <div class="form-group">
+                        <button type="button" class="edit-btn">Edit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+    const editButton = document.querySelector('.edit-btn');
+    const emailInput = document.querySelector('#email');
+    const fullNameInput = document.querySelector('#full-name');
+    
+    editButton.addEventListener('click', function () {
+        emailInput.readOnly = !emailInput.readOnly;
+        fullNameInput.readOnly = !fullNameInput.readOnly;
+        
+        if (!emailInput.readOnly) {
+            editButton.textContent = 'Save';
+        } else {
+            editButton.textContent = 'Edit';
+        }
+    });
+});
+
+    </script>
+</body>
+</html>
