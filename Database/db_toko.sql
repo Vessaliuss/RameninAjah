@@ -33,14 +33,40 @@ CREATE TABLE `barang` (
   `tgl_input` varchar(255) NOT NULL,
   `tgl_update` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 /*Data for the table `barang` */
 
 insert  into `barang`(`id`,`id_barang`,`id_kategori`,`nama_barang`,`merk`,`harga_beli`,`harga_jual`,`satuan_barang`,`stok`,`tgl_input`,`tgl_update`) values 
-(1,'BR001',1,'Curry Ramen','','42000','43000','PCS','18','6 October 2020, 0:41','13 July 2024, 17:04'),
-(2,'BR002',5,'Katsu Udon','','39000','40000','PCS','20','6 October 2020, 0:41','13 July 2024, 17:04'),
-(3,'BR003',1,'Miso Ramen','','40000','41000','PCS','19','6 October 2020, 1:34','13 July 2024, 17:05');
+(1,'BR001',1,'Ramen Beef Classic','Ramen','40000','45000','PCS','20','6 October 2020, 0:41','24 July 2024, 15:02'),
+(2,'BR002',1,'Ramen Seafood Supreme','Ramen','49000','55000','PCS','20','6 October 2020, 0:41','24 July 2024, 15:09'),
+(3,'BR003',1,'Ramen Gyoza Combo','Ramen','48000','52000','PCS','20','6 October 2020, 1:34','24 July 2024, 15:04'),
+(4,'BR004',1,'Ramen Chashu Deluxe','Ramen','45000','50000','PCS','20','24 July 2024, 15:01',NULL),
+(5,'BR005',1,'Ramen Prawn Delight','Ramen','47000','52000','PCS','20','24 July 2024, 15:05',NULL),
+(6,'BR006',1,'Ramen Tempura Special','Ramen','50000','55000','PCS','20','24 July 2024, 15:06',NULL),
+(7,'BR007',1,'Ramen Miso Traditional','Ramen','44000','48000','PCS','20','24 July 2024, 15:07','24 July 2024, 15:08'),
+(8,'BR008',1,'Ramen Pork Belly Delight','Ramen','50000','57000','PCS','20','24 July 2024, 15:08',NULL),
+(9,'BR009',1,'Ramen Steakhouse Style','Ramen','45000','60000','PCS','20','24 July 2024, 15:09',NULL),
+(10,'BR010',1,'Ramen Yakibuta Special','Ramen','48000','57000','PCS','20','24 July 2024, 15:10',NULL),
+(11,'BR011',1,'Ramen Chicken Teriyaki','Ramen','39000','45000','PCS','20','24 July 2024, 15:10',NULL),
+(12,'BR012',1,'Ramen Sushi Fushion','Ramen','36000','45000','PCS','20','24 July 2024, 15:11',NULL),
+(13,'BR013',5,'Kanikawa Ankake Udon','Udon','35000','42000','PCS','20','24 July 2024, 15:12',NULL),
+(14,'BR014',5,'Kotteri Udon','Udon','34000','45000','PCS','20','24 July 2024, 15:13',NULL),
+(15,'BR015',5,'Spicy Oden Udon','Udon','35000','42000','PCS','20','24 July 2024, 15:14',NULL),
+(16,'BR016',5,'Teriyaki Udon','Udon','34000','43000','PCS','20','24 July 2024, 15:15',NULL),
+(17,'BR017',5,'Beef Abura Udon','Udon','32000','41000','PCS','20','24 July 2024, 15:16',NULL),
+(18,'BR018',5,'Beef Abura Spicy Udon','Udon','32000','41000','PCS','20','24 July 2024, 15:16',NULL),
+(19,'BR019',5,'Beef Curry Udon','Udon','35500','45000','PCS','20','24 July 2024, 15:17',NULL),
+(20,'BR020',5,'Chickn Katsu Curry Udon','Udon','41000','52000','PCS','20','24 July 2024, 15:18',NULL),
+(21,'BR021',5,'Kake Udon','Udon','30000','37000','PCS','20','24 July 2024, 15:19',NULL),
+(22,'BR022',5,'Niku Udon','Udon','30000','36000','PCS','20','24 July 2024, 15:19',NULL),
+(23,'BR023',5,'Spicy Tori Udon','Udon','32000','40000','PCS','20','24 July 2024, 15:20',NULL),
+(24,'BR024',5,'Niku Zaru Udon','Udon','30000','39000','PCS','20','24 July 2024, 15:21',NULL),
+(25,'BR025',7,'Ocha','Drink','8000','14000','PCS','30','24 July 2024, 15:21',NULL),
+(26,'BR026',7,'Iced Lemon Tea','Drink','8000','15000','PCS','20','24 July 2024, 15:22',NULL),
+(27,'BR027',7,'Aqua','Drink','4000','8000','PCS','30','24 July 2024, 15:23',NULL),
+(28,'BR028',7,'Coca Cola','Drink','10000','15000','PCS','20','24 July 2024, 15:23',NULL),
+(29,'BR029',7,'Cafe Latte','Drink','15000','25000','PCS','20','24 July 2024, 15:24',NULL);
 
 /*Table structure for table `feedback` */
 
@@ -55,16 +81,17 @@ CREATE TABLE `feedback` (
   `terms_accepted` tinyint(1) NOT NULL,
   `tgl_input` timestamp NOT NULL DEFAULT current_timestamp(),
   PRIMARY KEY (`id_feedback`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 /*Data for the table `feedback` */
 
 insert  into `feedback`(`id_feedback`,`name`,`email`,`message`,`satisfaction`,`terms_accepted`,`tgl_input`) values 
-(1,'vessalius','vessalius@gmail.com','sangat bagus!','Sangat Puas',1,'2024-07-14 14:08:58'),
 (2,'ilham','ilham@gmail.com','restaurant nya sangat bagus dan bersih makanannya pun sangat enak sekali!','Sangat Puas',1,'2024-07-14 14:12:11'),
 (3,'budi','budi@gmail.com','ramen nya bukan kaleng - kaleng','Sangat Puas',1,'2024-07-14 14:12:50'),
 (4,'rina','rina@gmail.com','sangat enak kuahnya kental mie ramennya juga mantap','Sangat Puas',1,'2024-07-14 14:13:22'),
-(5,'rudi','rudi@gmail.com','pesanan saya sangat lama','Tidak Puas',1,'2024-07-14 14:38:13');
+(5,'rudi','rudi@gmail.com','pesanan saya sangat lama','Tidak Puas',1,'2024-07-14 14:38:13'),
+(6,'Naufal','naufalhilman@gmail.com','Ramen sangat Enak','Sangat Puas',1,'2024-08-09 20:30:19'),
+(7,'Naufal','naufalhilman21@gmail.com','ramen sangat enak','Sangat Puas',1,'2024-08-09 20:36:16');
 
 /*Table structure for table `kategori` */
 
@@ -122,6 +149,10 @@ CREATE TABLE `meja` (
 
 /*Data for the table `meja` */
 
+insert  into `meja`(`table_number`,`costumer_name`,`order_date`,`total_order`,`status`) values 
+(0,'','2024-07-24 00:00:00',90000,'diisi'),
+(12,'naufal','2024-08-09 00:00:00',100000,'diisi');
+
 /*Table structure for table `member` */
 
 DROP TABLE IF EXISTS `member`;
@@ -177,9 +208,15 @@ CREATE TABLE `order_items` (
   `quantity` int(11) DEFAULT NULL,
   `subtotal` decimal(10,2) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=45 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=60 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 /*Data for the table `order_items` */
+
+insert  into `order_items`(`id`,`order_id`,`item_id`,`quantity`,`subtotal`) values 
+(56,45,1,1,45000.00),
+(57,45,2,1,55000.00),
+(58,46,1,1,45000.00),
+(59,46,2,1,55000.00);
 
 /*Table structure for table `orders` */
 
@@ -194,9 +231,12 @@ CREATE TABLE `orders` (
   `status` varchar(50) DEFAULT NULL,
   `items_details` text DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=36 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=47 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 /*Data for the table `orders` */
+
+insert  into `orders`(`id`,`table_number`,`customer_name`,`order_date`,`total_order`,`status`,`items_details`) values 
+(46,'12','naufal','2024-08-09 00:00:00',100000.00,'Pending','Ramen Beef Classic (1), Ramen Seafood Supreme (1)');
 
 /*Table structure for table `penjualan` */
 
@@ -210,13 +250,9 @@ CREATE TABLE `penjualan` (
   `total` varchar(255) NOT NULL,
   `tanggal_input` varchar(255) NOT NULL,
   PRIMARY KEY (`id_penjualan`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 /*Data for the table `penjualan` */
-
-insert  into `penjualan`(`id_penjualan`,`id_barang`,`id_member`,`jumlah`,`total`,`tanggal_input`) values 
-(4,'BR001',1,'1','43000','15 July 2024, 12:15'),
-(5,'BR003',1,'1','41000','15 July 2024, 12:15');
 
 /*Table structure for table `reservasi` */
 
@@ -230,12 +266,13 @@ CREATE TABLE `reservasi` (
   `nomor_telepon` varchar(15) NOT NULL,
   `tanggal_reservasi` timestamp NOT NULL DEFAULT current_timestamp(),
   PRIMARY KEY (`id_reservasi`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 /*Data for the table `reservasi` */
 
 insert  into `reservasi`(`id_reservasi`,`nama`,`jumlah_orang`,`email`,`nomor_telepon`,`tanggal_reservasi`) values 
-(1,'naufal',4,'naufalhilman@gmail.com','08123467890','2024-07-14 16:36:14');
+(2,'Naufal',4,'naufalhilman20@gmail.com','08123456789','2024-08-09 20:31:36'),
+(3,'Naufal',4,'naufalhilman21@gmail.com','08123456789','2024-08-09 20:36:38');
 
 /*Table structure for table `roles` */
 
